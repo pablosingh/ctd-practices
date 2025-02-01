@@ -1,0 +1,30 @@
+h1 {
+  color: red;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: green;
+  border: 2px groove black;
+  padding: 5px;
+  gap: 5px;
+}
+.grid-items {
+  background-color: aqua;
+  border: 2px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  /* justify-content: space-around; */
+}
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.item2 {
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
