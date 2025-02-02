@@ -1,0 +1,29 @@
+div {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  /* transition: width 2s, height 1s; */
+  transition: width 2s;
+  margin: 10px;
+  color: wheat;
+}
+
+div:hover {
+  width: 100px;
+  /* height: 100px; */
+}
+.velocidad1 {
+  transition-timing-function: linear;
+}
+.velocidad2 {
+  transition-timing-function: ease;
+}
+.velocidad3 {
+  transition-timing-function: ease-in;
+}
+.velocidad4 {
+  transition-timing-function: ease-out;
+}
+.velocidad5 {
+  transition-timing-function: ease-in-out;
+}
