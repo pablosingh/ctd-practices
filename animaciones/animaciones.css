@@ -1,0 +1,15 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: prueba;
+  animation-duration: 3s;
+}
+@keyframes prueba {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
