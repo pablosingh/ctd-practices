@@ -176,3 +176,72 @@ section {
   transform: translateY(-5px);
   /* cursor: pointer; */
 }
+
+@media (max-width: 992px) {
+  section {
+    padding: 0 3%;
+    transition: 0.2s;
+  }
+  .icons {
+    display: none;
+  }
+  .hero-text {
+    padding-top: 0;
+  }
+  .hero-img {
+    text-align: center;
+  }
+  .hero-img img {
+    width: 80%;
+    margin: 10% 0 0 10%;
+  }
+  .hero-text p {
+    font-size: 70%;
+  }
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon-action {
+    display: block;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .hero-text {
+    text-align: center;
+    margin-top: 45px;
+    padding: 5%;
+  }
+  .hero-img img {
+    margin: 0;
+    width: 50%;
+  }
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 180px;
+    background-color: #041822ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all 0.5s ease;
+  }
+  .navlist a {
+    display: block;
+    margin: 7px 0;
+  }
+  #menu-toggle:checked + label.menu-icon-action + ul {
+    right: 0;
+  }
+}
