@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="checkCookies()" onunload="exitMsg()">
+    <p onclick="this.innerHTML = 'Hola Mundo!'">Hacé click</p>
+    <p onclick="changeThisElement(this)">Hacé click</p>
+    <p onclick="changeThisElementArrow(this)">Hacé click</p>
+    <hr />
+    <hr />
+    <hr />
+    <p id="test"></p>
+    <button id="btn">Mostrar Fecha</button>
+    <hr />
+    <hr />
+    <hr />
+    <p id="cookies"></p>
+    <script src="script.js"></script>
+  </body>
+</html>

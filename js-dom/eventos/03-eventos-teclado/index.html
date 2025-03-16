@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>Eventos de teclado</h3>
+    <h4>Key Down</h4>
+    <input type="text" id="input" onkeydown="keyDown(event)" />
+    <hr />
+    <h4>Key Up</h4>
+    <input type="text" id="input2" onkeyup="keyUp(event)" />
+    <hr />
+    <h4>Key Press</h4>
+    <input type="text" id="input3" onkeypress="keyPress(event)" />
+    <hr />
+    <h4>Key Down si es alt ?</h4>
+    <input type="text" id="input4" onkeydown="keyAlt(event)" />
+    <p id="alt"></p>
+    <hr />
+    <h4>Key Down si es CapsLock ?</h4>
+    <input type="text" id="input5" onkeydown="key5(event)" />
+    <p id="alt5"></p>
+    <hr />
+    <script src="script.js"></script>
+  </body>
+</html>
