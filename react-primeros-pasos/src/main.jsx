@@ -7,6 +7,7 @@ import Count from './Count.jsx';
 import Dashboard from './Dashboard.jsx';
 import Todo from './Todo.jsx';
 import TodoApp from './TodoApp.jsx';
+import Task from './Task.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Count /> */}
     {/* <Dashboard /> */}
     {/* <Todo /> */}
-    <TodoApp />
+    {/* <TodoApp /> */}
+    <Task />
   </StrictMode>
 );
