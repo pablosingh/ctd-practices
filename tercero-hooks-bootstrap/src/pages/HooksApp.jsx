@@ -1,12 +1,13 @@
 import React from 'react';
+import { Counter } from '../components/Counter';
+import { Form } from '../components/Form';
 
 export default function HooksApp() {
   return (
     <>
       <h1>HooksApp</h1>
-      <button type="button" className="btn btn-primary">
-        Primary
-      </button>
+      {/* <Counter /> */}
+      <Form />
     </>
   );
 }
