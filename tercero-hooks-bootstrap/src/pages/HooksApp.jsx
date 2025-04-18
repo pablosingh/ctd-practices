@@ -7,8 +7,10 @@ export default function HooksApp() {
   return (
     <>
       <h1>HooksApp</h1>
-      {/* <Counter /> */}
-      {/* <Form /> */}
+      <Counter />
+      <hr />
+      <Form />
+      <hr />
       <FetchApp />
     </>
   );

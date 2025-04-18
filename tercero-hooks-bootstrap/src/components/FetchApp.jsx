@@ -1,12 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useFetch } from '../hooks/useFetch';
 
 export const FetchApp = () => {
-  const url = 'https://jsonplaceholder.typicode.com/users';
-  const { data, isLoading, error } = useFetch(url);
+  const url = 'https://jsonplaceholder.typicode.com/posts';
+  const { data, isLoading, error, fetchData } = useFetch();
+  const obj = {
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  };
+  const objUpdate = {
+    id: 1,
+    title: 'foo update',
+    body: 'bar update',
+    userId: 1,
+  };
+  useEffect(() => {
+    fetchData(url, 'GET');
+  }, []);
   return (
     <>
       <h2>FetchApp</h2>
+      <button onClick={() => fetchData(url, 'GET')} className="btn btn-primary">
+        GET
+      </button>
+      <button onClick={() => fetchData(url, 'POST', obj)} className="btn btn-primary">
+        POST
+      </button>
+      <button onClick={() => fetchData(`${url}/1`, 'PUT', objUpdate)} className="btn btn-primary">
+        PUT
+      </button>
+      <button onClick={() => fetchData(`${url}/1`, 'DELETE')} className="btn btn-primary">
+        DELETE
+      </button>
       {isLoading ? (
         <h4>Cargando...</h4>
       ) : error ? (
@@ -16,20 +42,19 @@ export const FetchApp = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Email</th>
-              <th scope="col">WebSite</th>
+              <th scope="col">Id Usuario</th>
+              <th scope="col">Titulo</th>
             </tr>
           </thead>
           <tbody>
             {data &&
-              data.map((user) => {
+              data.length &&
+              data.map((item) => {
                 return (
-                  <tr key={user.id}>
-                    <th scope="row">{user.id}</th>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.website}</td>
+                  <tr key={item.id}>
+                    <th scope="row">{item.id}</th>
+                    <td>{item.userId}</td>
+                    <td>{item.title}</td>
                   </tr>
                 );
               })}

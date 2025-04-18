@@ -1,17 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-export const useFetch = (url) => {
+export const useFetch = () => {
   const [state, setState] = useState({
     data: null,
     isLoading: true,
     error: null,
   });
-  const { data, isLoading, error } = state;
-  const getFetch = async () => {
+  const fetchData = async (url, method, bodyData = null) => {
     if (!url) return;
     try {
-      const res = await fetch(url);
+      const options = {
+        method,
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: method == 'GET' || method == 'DELETE' ? null : JSON.stringify(bodyData),
+      };
+      const res = await fetch(url, options);
       const dataRes = await res.json();
+      console.log(dataRes);
       setState({
         data: dataRes,
         isLoading: false,
@@ -26,12 +33,8 @@ export const useFetch = (url) => {
       console.error(error);
     }
   };
-  useEffect(() => {
-    getFetch();
-  }, [url]);
   return {
-    data,
-    isLoading,
-    error,
+    ...state,
+    fetchData,
   };
 };
