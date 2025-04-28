@@ -18,10 +18,10 @@ export const Home = () => {
         </thead>
         <tbody>
           <tr>
-            <td>{user.name}</td>
-            <td>{user.lastname}</td>
-            <td>{user.email}</td>
-            <td>{user.job}</td>
+            <td>{user?.name}</td>
+            <td>{user?.lastname}</td>
+            <td>{user?.email}</td>
+            <td>{user?.job}</td>
             <td>{country}</td>
             <td>{currency}</td>
           </tr>
