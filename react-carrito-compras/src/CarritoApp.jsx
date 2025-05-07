@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { NavBarComponent } from './components/NavBarComponent';
+import { NavBarComponent } from './components/NavBarComponent.jsx';
 import { ProductsPage } from './pages/ProductsPage';
 import { CartPage } from './pages/CartPage';
 import { ProductProvider } from './context/ProductProvider';
-import { CartProvider } from './context/CartProvider';
+import { CartProvider } from './context/CartProvider.jsx';
 
 export const CarritoApp = () => {
   return (
